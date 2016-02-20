@@ -44,9 +44,6 @@ void convert(){
 
 
 void drive(){
- Serial.println(lx,DEC);
- Serial.println(ly,DEC);
- Serial.println(az,DEC);
 
  if(lx == 90){
   if(ly == 90){
@@ -65,7 +62,7 @@ void drive(){
    }
  }
  else{
-   if (lx < 90){
+   if (lx > 90){
    LeftM.write(lx);//if 80 //if 100 
    RightM.write(lx+20);//needs to be 100 //needs to be 80 
    }
